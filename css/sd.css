@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {position: absolute; width: 100%;min-height: 100%;left: 0;top: 0; background: #fff; overflow:auto;}
+.os-box{height: 100%;width: 100%;position: absolute !important;color: #fff !important;
+    background-image:-webkit-linear-gradient(top,#6d040a, #c04148);
+    background-image:linear-gradient(top,#6d040a, #c04148);}
+
+.audio_but{ position: fixed; width: 32px; height: 32px; top: 10px; right: 10px; z-index: 999999; border: 2px solid #fff; border-radius: 50%;}
+.audio_but img{ width: 60%; margin: 20%;}
+.xz{  -webkit-animation: xzs 10s ease-in-out alternate infinite;
+    -moz-animation: xzs 10s ease-in-out alternate infinite;
+    animation: xzs 10s ease-in-out alternate infinite;}
+@keyframes xzs {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+     }
+     100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+     }
+ }
+
+.loadprogress{ position: fixed; top: 0; left: 0;z-index: 999; width: 100%; height: 100%;
+    background-image:-webkit-linear-gradient(top,#6d040a, #c04148);
+    background-image:linear-gradient(top,#6d040a, #c04148);
+}
+.progress{position: absolute; top: 50%; left: 0;  width: 100%; margin-top: -120px;}
+.progresslogo img{ width: 14%; margin: 0 auto 10px; display: block;}
+.progresszi{ width: 60%; height: 4px; background: rgba(255,255,255,0.6);border-radius: 4px; margin: 0 auto;}
+.progresszi b{ display: block; height: 100%; width: 2%; background: #fff;border-radius: 4px; max-width: 100%;}
+
+
+.progressyuan{ width:120px; height: 120px;display: -webkit-box !important;display: box !important;position: relative; margin: 0 auto;}
+.progressyuan .pro{ overflow: hidden; width: 50%; height: 100%; position: absolute; top: 0;}
+.progressyuan .pro b{ display: block; width: 200%; height: 100%; border:6px solid  transparent; border-radius:50%; position: absolute; box-sizing: border-box; top:0; left: 0;
+     transform:rotateZ(225deg); }
+.progressyuan .pro.proleft{ left: 0;}
+.progressyuan .pro.proright{right: 0;}
+.progressyuan .pro.proleft b{ border-bottom:6px solid  #fff; border-left:6px solid  #fff; }
+.progressyuan .pro.proright b{ border-top:6px solid  #fff; border-right:6px solid  #fff;left: -100%; }
+
+.protxt{ position: absolute; width: 90%; height: 90%; top: 5%; left: 5%; border-radius: 50%; border-radius:50%; background: rgba(255,255,255,0.1); text-align: center;color: #fff; }
+.protxt img{ max-width:100%; display: block; margin: 30px auto 5px; width: 74%;}
+
+.progresstxt{ text-align: center; color: #fff; font-size: 15px; padding: 10px 0;}
+
+
+
+.sg-xh{ width:100%; height: 100%; position: fixed; z-index:99; top: 0; left: 0;}
+.sg-xh div{ position: absolute;}
+
+.sd-main{ position: absolute; width: 100%; z-index:2; left: 0; top: 0;}
+.sd-bg{ width: 100%; position: relative; z-index: 3; left: 0; top: 0;}
+.sd-bg img{ width: 100%;}
+
+.sd_{ position: absolute; z-index: 4; top: 0; left: 0; width: 100%;}
+.sd_ img{ width: 100%;}
+
+.sd-present{width: 30%; position: absolute; top:22%; left:25%; z-index: 13;}
+.sd-bottom .sd-present{top:45%; left:25%;}
+.sd-present.zha.one{top:0%; left:-2%}
+.sd-present.zha.two{top:6%; left:61%}
+.sd-present.zha.three{top:35%; left:60%}
+.sd-present.zha.four{top:68%; left:3%}
+.sd-present.zha.five{top:66%; left:60%}
+.sd-present.zha.six{top:37%; left:-2%}
+.sd-present.zha.seven{top:11%; left:28%}
+
+.sd-oldman{ width: 50%; position: relative; margin:55% 0 0 50%;}
+.sd-oldman div{ position: absolute; top: 0;left: 0;}
+.sd-oldman .body{ width: 100%; z-index: 7;}
+.sd-oldman .hand{ width:70%; top: 220px; left: -70px; z-index: 6;transform: rotate(40deg);transform-origin: top right;}
+
+.hui {
+    -webkit-animation: go 1.5s ease-in-out alternate ;
+    -moz-animation: go 1.5s ease-in-out alternate ;
+    animation: go 1.5s ease-in-out alternate ;
+ }
+ @keyframes go {
+    0% {
+        -webkit-transform: rotate(40deg);
+        -webkit-transform-origin: top right;
+        -moz-transform: rotate(40deg);
+        -moz-transform-origin: top right;
+        transform: rotate(40deg);
+        transform-origin: top right;
+     }
+     50% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: top right;
+        -moz-transform: rotate(0deg);
+        -moz-transform-origin: top right;
+        transform: rotate(0deg);
+        transform-origin: top right;
+     }
+     100% {
+        -webkit-transform: rotate(40deg);
+        -webkit-transform-origin: top right;
+        -moz-transform: rotate(40deg);
+        -moz-transform-origin: top right;
+        transform: rotate(40deg);
+        transform-origin: top right;
+     }
+ }
+
+
+.sd-family{ width: 96%; margin:100% auto 0;}
+.sd-teacher{ width:100%; margin: -50% auto 0;}
+.sd-xr{ width:43%; position: absolute; top: 64%; left: 12%; z-index: 10}
+.sd-qr{ width: 24%; position: absolute; top: 71%; right: 0; z-index: 11;}
+
+.sd-bottom{ width: 100%; position: relative; margin-top:-18.7%; z-index: 12;}
+.bottom-bg{ width: 100%; position: relative;z-index: 7;}
+.bottom-txt{ width: 80%; top: 20%; left: 10%; position: absolute; z-index: 8;}
+
+.op0{opacity: 0;}
+
