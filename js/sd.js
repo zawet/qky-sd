@@ -1,8 +1,31 @@
 
 var manifest;
 var preload;
-
-
+//定义相关JSON格式文件列表
+function setupManifest() {
+    onemf= [
+        {src: "images/bg.png",id: "bg"},
+        {src: "images/xh.png",id: "xh"},
+        {src: "images/xh2.png",id: "xh2"},
+        {src: "images/bottom.png",id: "bottom"},
+        {src: "images/bottom_snow.png",id: "bottom_snow"},
+        {src: "images/choose_class_present.png",id: "choose_class_present"},
+        {src: "images/classroom_present.png",id: "classroom_present"},
+        {src: "images/comment_present.png",id: "comment_present"},
+        {src: "images/exam_present.png",id: "exam_present"},
+        {src: "images/logo_present.png",id: "logo_present"},
+        {src: "images/oa_present.png",id: "oa_present"},
+        //{src: "images/new_home_school_present.png",id: "new_home_school_present"},
+        {src: "images/second_class.png",id: "second_class"},
+        {src: "images/family.png",id: "family"},
+        {src: "images/oldman.png",id: "oldman"},
+        {src: "images/oldman_hand_down.png",id: "oldman_hand_down"},
+        {src: "images/penguin.png",id: "penguin"},
+        {src: "images/snow_man.png",id: "snow_man"},
+        {src: "images/Star.mp3",id: "star"},
+        {src: "images/teacher.png",id: "teacher"}
+    ];   
+}
 
 $(function () {
     setupManifest();
@@ -10,28 +33,25 @@ $(function () {
 });
 
 function toStart(){
-    //console.log(preload._loadItemsById);
     $(".audio_but").click(function(){
         if($(this).attr("isc")=="no"){
-            $("#sd-audio").get(0).pause();
+            $(".star audio").get(0).pause();
             $(this).removeClass("xz");
             $(this).attr("isc","yes");
         }else{
-            $("#sd-audio").get(0).play();
+            $(".star audio").get(0).play();
             $(this).addClass("xz");
             $(this).attr("isc","no");
         }   
     });
-
     var imgids=preload._loadItemsById;
     setImg(imgids);
-    dh();
-    
+    //$(".sd-bottom .sd-present").addClass("trn").removeClass("op0").addClass("zha");
+    dh(); 
 }
 
 function setImg(obj){
     for(var key in obj){
-        //console.log(key);
         $("."+key).html(preload.getResult(key));    
     }  
 }
@@ -44,8 +64,7 @@ function dh(){
     setTimeout(function(){
         $(".sd-present.zero").removeClass("op0").addClass("bounceIn");
         xh(box,"url('images/xh.png')");
-        xh(box,"url('images/xh2.png')");
-        
+        xh(box,"url('images/xh2.png')");  
     },2500);
     setTimeout(function(){
         togun();
@@ -64,13 +83,12 @@ function dh(){
         $(".sd-qr").removeClass("op0"); 
     },14000);
     setTimeout(function(){
-        huang();
+        $(".sd-xr").addClass("wobble");
+        $(".sd-qr").addClass("wobble");
     },14500);
-
     setTimeout(function(){
         $(".sd-bottom .sd-present").addClass("trn").removeClass("op0").addClass("zha");
-    },21000);
-    
+    },20000);
     setTimeout(function(){
         $(".sd-bottom .sd-present").removeClass("zha");
     },30000);
@@ -99,7 +117,6 @@ function togun(){
     },20);
     var pst=setInterval(function(){
         pstop++;
-        
         //if(psleft<200)psleft=psleft+5;else if(psleft>20) psleft=psleft-5; 
         //console.log(psleft);
         //$(".sd-present.zero").css({"top":pstop+"px","left":psleft+"px"});
@@ -107,37 +124,6 @@ function togun(){
         if(pstop>=(mh-160)) clearInterval(pst);
     },20);  
 }
-
-function huang(){
-    $(".sd-xr").addClass("wobble");
-    $(".sd-qr").addClass("wobble");
-}
-
-//定义相关JSON格式文件列表
-function setupManifest() {
-    onemf= [
-        {src: "images/bg.png",id: "bg"},
-        {src: "images/xh.png",id: "xh"},
-        {src: "images/xh2.png",id: "xh2"},
-        {src: "images/bottom.png",id: "bottom"},
-        {src: "images/bottom_snow.png",id: "bottom_snow"},
-        {src: "images/choose_class_present.png",id: "choose_class_present"},
-        {src: "images/classroom_present.png",id: "classroom_present"},
-        {src: "images/comment_present.png",id: "comment_present"},
-        {src: "images/exam_present.png",id: "exam_present"},
-        {src: "images/logo_present.png",id: "logo_present"},
-        {src: "images/oa_present.png",id: "oa_present"},
-        {src: "images/new_home_school_present.png",id: "new_home_school_present"},
-        {src: "images/second_class.png",id: "second_class"},
-        {src: "images/family.png",id: "family"},
-        {src: "images/oldman.png",id: "oldman"},
-        {src: "images/oldman_hand_down.png",id: "oldman_hand_down"},
-        {src: "images/penguin.png",id: "penguin"},
-        {src: "images/snow_man.png",id: "snow_man"},
-        {src: "images/teacher.png",id: "teacher"}
-    ];   
-}
-
 
 //开始预加载
 function startPreload() {
@@ -179,12 +165,9 @@ function handleFileProgress(event) {
 function loadComplete(event) {
     $(".loadprogress").fadeOut(200);
     toStart();
-   
+    $(".star audio").get(0).play();
+    $(".audio_but").addClass("xz"); 
 }
 
-
-
-
-$(window).on('resize', function () {});
 
 
