@@ -156,6 +156,7 @@ function handleFileProgress(event) {
     if(p<=50){
          $(".pro.proright b").css("transform","rotateZ("+(p*3.6+225)+"deg)");
      }else{
+        $(".pro.proright b").css("transform","rotateZ(405deg)");
          $(".pro.proleft b").css("transform","rotateZ("+(p*3.6+45)+"deg)");
     }
     
@@ -166,7 +167,7 @@ function loadComplete(event) {
     $(".loadprogress").fadeOut(200);
     toStart();
     $(".star audio").get(0).play();
-    $(".audio_but").addClass("xz"); 
+    $(".audio_but").show().addClass("xz"); 
 }
 
 

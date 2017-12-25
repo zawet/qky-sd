@@ -7,7 +7,7 @@ body {position: absolute; width: 100%;min-height: 100%;left: 0;top: 0; backgroun
     background-image:-webkit-linear-gradient(top,#6d040a, #c04148);
     background-image:linear-gradient(top,#6d040a, #c04148);}
 
-.audio_but{ position: fixed; width: 32px; height: 32px; top: 10px; right: 10px; z-index: 999999; border: 2px solid #fff; border-radius: 50%;}
+.audio_but{ position: fixed; width: 32px; height: 32px; top: 10px; right: 10px; z-index: 999999; border: 2px solid #fff; border-radius: 50%; display: none;}
 .audio_but img{ width: 60%; margin: 20%;}
 .xz{  -webkit-animation: xzs 10s  linear  infinite;
     -moz-animation: xzs 10s linear  infinite;
